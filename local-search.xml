@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>建站小记</title>
+    <link href="/2023/10/13/first-post/"/>
+    <url>/2023/10/13/first-post/</url>
+    
+    <content type="html"><![CDATA[<p>记录本博客搭建过程</p><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>技术总结</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2023/10/13/hello-world/"/>
     <url>/2023/10/13/hello-world/</url>
