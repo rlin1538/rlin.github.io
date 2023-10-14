@@ -23,11 +23,13 @@
 <meta property="og:site_name" content="Rlin的博客">
 <meta property="og:description" content="记录本博客搭建过程。 为了以后更好的记录学习过程、问题解决以及一些随笔，特建立个人博客，开始养成写博客的习惯。 安装Hexo环境 Node.js  Git    安装过程不再细讲，主要吐槽一下用宝塔面板安装node.js时各种问题：npm版本过高、命令行命令无效等。所以没有必要在服务器上装，本地电脑安装后，后面有部署到GitHub Page的步骤。  安装环境安装完，直接用npm安装Hexo 12">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://nuaa.life/2023/10/13/first-post/001.png">
 <meta property="article:published_time" content="2023-10-13T02:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-13T16:02:48.165Z">
+<meta property="article:modified_time" content="2023-10-14T03:57:48.680Z">
 <meta property="article:author" content="Rlin">
 <meta property="article:tag" content="技术总结">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://nuaa.life/2023/10/13/first-post/001.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -227,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          659 字
+          976 字
         
       </span>
     
@@ -238,7 +240,7 @@
         
         
         
-          6 分钟
+          9 分钟
         
       </span>
     
@@ -313,14 +315,17 @@
 <p>接着安装fluid主题，官网：<a target="_blank" rel="noopener" href="https://hexo.io/themes/">Fluid</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure>
 
+<p>或者选择直接去GitHub下载<a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid/releases/tag/v1.9.5">release源码</a>，解压到hexo项目的themes目录下，重命名为fluid</p>
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>修改博客目录中_config.yml</p>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">language:</span> <span class="hljs-built_in">zh</span>-CN  <span class="hljs-meta"># 指定中文</span><br><span class="hljs-symbol">theme:</span> fluid  <span class="hljs-meta"># 指定主题</span><br></code></pre></td></tr></table></figure>
 
-<p>更多配置可以参考Hexo官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">Hexo 配置</a>，以及Fluid官方文档：<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/">Fluid 配置指南</a></p>
+<p>更多配置可以参考Hexo官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">Hexo 配置</a>，以及Fluid官方文档：<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/">Fluid 配置指南</a>。Hexo配置是博客主目录下的_config.yml，Fluid配置是themes&#x2F;fluid目录下的_config.yml</p>
 <h2 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h2><p>执行如下命令，可以在本地生成静态页面</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo clean  <span class="hljs-comment"># 清空一下缓存，有时候博客页面显示不正常也可以试试这个命令行</span><br>$ hexo g  <span class="hljs-comment"># hexo generate的简写，把刚刚做的改动生成更新一下</span><br>$ hexo server  <span class="hljs-comment"># 在本地服务器看看博客：https://localhost:4000</span><br></code></pre></td></tr></table></figure>
 
 <p>到此你已经可以在本地看到你的博客小站啦~</p>
+<h1 id="部署Github-Page"><a href="#部署Github-Page" class="headerlink" title="部署Github Page"></a>部署Github Page</h1><p>Github Page是提供静态网站访问服务的，就是将静态网站项目传到GitHub上，他能为你提供一个url入口（如rlin1538.github.io），直接访问你的静态网站，而Hexo编译生成的就是一个静态网站。</p>
+<p>首先我们得把生成的静态网站上传到GitHub中，GitHub中得有一个对应的仓库。所以第一步是创建一个名为<code>GitHub用户名.github.io</code>的代码仓库<img src="/2023/10/13/first-post/001.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
