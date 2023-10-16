@@ -8,7 +8,7 @@
     <link href="/2023/10/16/pcdet/"/>
     <url>/2023/10/16/pcdet/</url>
     
-    <content type="html"><![CDATA[<h1 id="问题集合"><a href="#问题集合" class="headerlink" title="问题集合"></a>问题集合</h1><ol><li><a href="https://blog.csdn.net/weixin_52288941/article/details/133518555">https://blog.csdn.net/weixin_52288941/article/details/133518555</a></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="问题集合"><a href="#问题集合" class="headerlink" title="问题集合"></a>问题集合</h1><ol><li><code>ModuleNotFoundError: No module named ‘kornia‘</code> 或者<code>Cannot statically infer the expected size of a list in this context</code> <a href="https://blog.csdn.net/weixin_52288941/article/details/133518555">https://blog.csdn.net/weixin_52288941/article/details/133518555</a></li></ol>]]></content>
     
     
     
