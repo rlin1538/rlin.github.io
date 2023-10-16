@@ -16,23 +16,26 @@
   <meta name="author" content="Rlin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="问题集合 ModuleNotFoundError: No module named ‘kornia‘ 或者Cannot statically infer the expected size of a list in this context https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_52288941&#x2F;article&#x2F;details&#x2F;133518555">
+    <meta name="description" content="前言环境搭建https:&#x2F;&#x2F;www.cnblogs.com&#x2F;mrneojeep&#x2F;p&#x2F;17390375.html https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_45228845&#x2F;article&#x2F;details&#x2F;125583891 问题集合 ModuleNotFoundError: No module named ‘kornia‘   或者Cannot statically infer the e">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Rlin的博客">
+<meta property="og:title" content="OpenPCDet复现">
 <meta property="og:url" content="http://nuaa.life/2023/10/16/pcdet/index.html">
 <meta property="og:site_name" content="Rlin的博客">
-<meta property="og:description" content="问题集合 ModuleNotFoundError: No module named ‘kornia‘ 或者Cannot statically infer the expected size of a list in this context https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_52288941&#x2F;article&#x2F;details&#x2F;133518555">
+<meta property="og:description" content="前言环境搭建https:&#x2F;&#x2F;www.cnblogs.com&#x2F;mrneojeep&#x2F;p&#x2F;17390375.html https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_45228845&#x2F;article&#x2F;details&#x2F;125583891 问题集合 ModuleNotFoundError: No module named ‘kornia‘   或者Cannot statically infer the e">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-16T11:54:33.295Z">
-<meta property="article:modified_time" content="2023-10-16T11:54:33.295Z">
+<meta property="og:image" content="http://nuaa.life/2023/10/16/pcdet/2023-10-16-19-58-11.png">
+<meta property="article:published_time" content="2023-10-16T12:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-16T12:12:30.306Z">
 <meta property="article:author" content="Rlin">
+<meta property="article:tag" content="复现记录, 目标检测, 点云, 深度学习, 激光雷达">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://nuaa.life/2023/10/16/pcdet/2023-10-16-19-58-11.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Rlin的博客</title>
+  <title>OpenPCDet复现 - Rlin的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -222,7 +225,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="OpenPCDet复现"></span>
           
         </div>
 
@@ -238,7 +241,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-16 19:54" pubdate>
+        <time datetime="2023-10-16 20:00" pubdate>
           2023年10月16日 晚上
         </time>
       </span>
@@ -250,7 +253,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          166 字
+          459 字
         
       </span>
     
@@ -261,7 +264,7 @@
         
         
         
-          2 分钟
+          4 分钟
         
       </span>
     
@@ -306,13 +309,36 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">OpenPCDet复现</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2023年10月16日 晚上
+                  
+                
+              </p>
             
             
               <div class="markdown-body">
                 
-                <h1 id="问题集合"><a href="#问题集合" class="headerlink" title="问题集合"></a>问题集合</h1><ol>
-<li><code>ModuleNotFoundError: No module named ‘kornia‘</code> 或者<code>Cannot statically infer the expected size of a list in this context</code> <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_52288941/article/details/133518555">https://blog.csdn.net/weixin_52288941/article/details/133518555</a></li>
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/mrneojeep/p/17390375.html">https://www.cnblogs.com/mrneojeep/p/17390375.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45228845/article/details/125583891">https://blog.csdn.net/qq_45228845/article/details/125583891</a></p>
+<h1 id="问题集合"><a href="#问题集合" class="headerlink" title="问题集合"></a>问题集合</h1><ol>
+<li><p><img src="/2023/10/16/pcdet/2023-10-16-19-58-11.png" srcset="/img/loading.gif" lazyload><code>ModuleNotFoundError: No module named ‘kornia‘</code> </p>
+<p> 或者<code>Cannot statically infer the expected size of a list in this context</code> </p>
+<blockquote>
+<p>解决方案：安装正确版本的kornia<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_52288941/article/details/133518555">https://blog.csdn.net/weixin_52288941/article/details/133518555</a></p>
+</blockquote>
+</li>
+<li><p>demo跑通了但是：</p>
+ <figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gams">GLFW Error: X11: The <span class="hljs-keyword">DISPLAY</span> environment <span class="hljs-keyword">variable</span> is <span class="hljs-comment">missing</span><br></code></pre></td></tr></table></figure>
+
+<p> ssh远程没有Xserver客户端，显示不了可视化工具</p>
+<blockquote>
+<p>解决方案：配置本地可视化<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_50181189/article/details/120958568">https://blog.csdn.net/m0_50181189/article/details/120958568</a></p>
+</blockquote>
+</li>
 </ol>
 
                 
@@ -323,6 +349,13 @@
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%A4%8D%E7%8E%B0%E8%AE%B0%E5%BD%95-%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B-%E7%82%B9%E4%BA%91-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE/" class="print-no-link">#复现记录, 目标检测, 点云, 深度学习, 激光雷达</a>
+      
+    </div>
+  
 </div>
 
 
@@ -331,7 +364,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
+      <div>OpenPCDet复现</div>
       <div>http://nuaa.life/2023/10/16/pcdet/</div>
     </div>
     <div class="license-meta">

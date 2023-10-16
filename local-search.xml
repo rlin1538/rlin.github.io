@@ -4,13 +4,19 @@
   
   
   <entry>
-    <title></title>
+    <title>OpenPCDet复现</title>
     <link href="/2023/10/16/pcdet/"/>
     <url>/2023/10/16/pcdet/</url>
     
-    <content type="html"><![CDATA[<h1 id="问题集合"><a href="#问题集合" class="headerlink" title="问题集合"></a>问题集合</h1><ol><li><code>ModuleNotFoundError: No module named ‘kornia‘</code> 或者<code>Cannot statically infer the expected size of a list in this context</code> <a href="https://blog.csdn.net/weixin_52288941/article/details/133518555">https://blog.csdn.net/weixin_52288941/article/details/133518555</a></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><p><a href="https://www.cnblogs.com/mrneojeep/p/17390375.html">https://www.cnblogs.com/mrneojeep/p/17390375.html</a></p><p><a href="https://blog.csdn.net/qq_45228845/article/details/125583891">https://blog.csdn.net/qq_45228845/article/details/125583891</a></p><h1 id="问题集合"><a href="#问题集合" class="headerlink" title="问题集合"></a>问题集合</h1><ol><li><p><img src="/2023/10/16/pcdet/2023-10-16-19-58-11.png"><code>ModuleNotFoundError: No module named ‘kornia‘</code> </p><p> 或者<code>Cannot statically infer the expected size of a list in this context</code> </p><blockquote><p>解决方案：安装正确版本的kornia<br><a href="https://blog.csdn.net/weixin_52288941/article/details/133518555">https://blog.csdn.net/weixin_52288941/article/details/133518555</a></p></blockquote></li><li><p>demo跑通了但是：</p> <figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gams">GLFW Error: X11: The <span class="hljs-keyword">DISPLAY</span> environment <span class="hljs-keyword">variable</span> is <span class="hljs-comment">missing</span><br></code></pre></td></tr></table></figure><p> ssh远程没有Xserver客户端，显示不了可视化工具</p><blockquote><p>解决方案：配置本地可视化<br><a href="https://blog.csdn.net/m0_50181189/article/details/120958568">https://blog.csdn.net/m0_50181189/article/details/120958568</a></p></blockquote></li></ol>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>复现记录, 目标检测, 点云, 深度学习, 激光雷达</tag>
+      
+    </tags>
     
   </entry>
   
