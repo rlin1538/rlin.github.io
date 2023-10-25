@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>Flutter踩坑报告</title>
+    <link href="/2023/10/25/draw/"/>
+    <url>/2023/10/25/draw/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Flutter-踩坑总集"><a href="#Flutter-踩坑总集" class="headerlink" title="Flutter 踩坑总集"></a>Flutter 踩坑总集</h1><h3 id="卡在assembleDebug"><a href="#卡在assembleDebug" class="headerlink" title="卡在assembleDebug"></a>卡在assembleDebug</h3><p>卡在 Running Gradle task ‘assembleDebug’… 这个步骤。而且会报网络的 Exception。</p><p>可以尝试改flutter和项目的gradle源地址到国内镜像，可能没啥用</p><p>也可以手动安装。首先在 android&#x2F;gradle&#x2F;wrapper&#x2F;gradle-wrapper.properties 可以看到本项目使用的 Gradle 版本。在 Gradle 的官网（<a href="https://gradle.org/%EF%BC%89%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%B8%8B%E8%BD%BD%E5%88%B0%E5%AE%8C%E6%95%B4%E7%9A%84%E5%8C%85%E3%80%82">https://gradle.org/）就可以下载到完整的包。</a></p><p>在 <a href="https://services.gradle.org/distributions/">https://services.gradle.org/distributions/</a> 下载对应版本的包，如 gradle-5.6.2-all.zip。</p><p>下载完成之后解压到 ～&#x2F;.gradle&#x2F;wrapper&#x2F;dists&#x2F;gradle-5.6.2-all&#x2F;xxx 下。其中 xxx 为一串如 9st6wgf78h16so49nn74lgtbb 的字符串。</p><hr><h3 id="Google-font版本太低"><a href="#Google-font版本太低" class="headerlink" title="Google font版本太低"></a>Google font版本太低</h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-section">import &#x27;asset_manifest.dart&#x27;;</span><br><span class="hljs-section">^^^^^^^^^^^^^</span><br></code></pre></td></tr></table></figure><p>Google font版本太低<br><a href="https://dev.to/curtlycritchlow/how-to-fix-assetmanifest-is-imported-from-both-packageflutter-and-packagegooglefonts-error-28e8">https://dev.to/curtlycritchlow/how-to-fix-assetmanifest-is-imported-from-both-packageflutter-and-packagegooglefonts-error-28e8</a></p><hr><h3 id="Execution-failed-for-task-‘-app-lintVitalRelease’"><a href="#Execution-failed-for-task-‘-app-lintVitalRelease’" class="headerlink" title="Execution failed for task ‘:app:lintVitalRelease’."></a>Execution failed for task ‘:app:lintVitalRelease’.</h3><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl">Flutter <span class="hljs-literal">Error</span> : Could <span class="hljs-keyword">not</span> resolve <span class="hljs-keyword">all</span> artifacts <span class="hljs-keyword">for</span> <span class="hljs-keyword">configuration</span> ‘:image_picker_android:debugUnitTestRuntimeClasspath’<br></code></pre></td></tr></table></figure><p><a href="https://flutter-developer.medium.com/solved-flutter-error-could-not-resolve-all-artifacts-for-configuration-56deea1c5d12">https://flutter-developer.medium.com/solved-flutter-error-could-not-resolve-all-artifacts-for-configuration-56deea1c5d12</a></p><p>解决方案似乎是忽略掉某些错误🤔</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>flutter</tag>
+      
+      <tag>bug</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【BEV】BEV模型开山论文——Lift-Splat-Shoot</title>
     <link href="/2023/10/23/lss/"/>
     <url>/2023/10/23/lss/</url>
