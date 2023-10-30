@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>【BEV】伪雷达点云—Pseudo-LiDAR</title>
+    <link href="/2023/10/30/pseudo-LiDAR/"/>
+    <url>/2023/10/30/pseudo-LiDAR/</url>
+    
+    <content type="html"><![CDATA[<h1 id="论文"><a href="#论文" class="headerlink" title="论文"></a>论文</h1><p>论文的题目是：<em>《<a href="https://arxiv.org/abs/1812.07179">Pseudo-LiDAR from Visual Depth Estimation: Bridging the Gap in 3D Object Detection for Autonomous Driving》</a></em></p><p>论文探讨了基于图像的3D感知和基于LiDAR的3D感知之间的差异，指出基于图像方法的不足，提出了Pseudo-LiDAR来从图像建立点云数据进行感知任务。</p><h3 id="Image-based-3D-Perception-劣势原因"><a href="#Image-based-3D-Perception-劣势原因" class="headerlink" title="Image-based 3D Perception 劣势原因"></a>Image-based 3D Perception 劣势原因</h3><ul><li><p>不准确的深度信息</p></li><li><p>图像2D的表示方式</p></li></ul><p>后者是造成2维卷积在基于图像的感知任务中使图像扭曲的原因。作者分析了两个主要问题：一是不同物体间应该不连贯，但2D图像中不同深度的物体均在一个平面上（不像点云那种，不同深度不连贯）；二是前后景不同尺度，2D图像远处物体由于透视原因尺度较小，检测成为一个较难的问题（雷达点云则能保持三维空间中原始的尺度）。</p><h3 id="Pseudo-LiDAR-流程"><a href="#Pseudo-LiDAR-流程" class="headerlink" title="Pseudo-LiDAR 流程"></a>Pseudo-LiDAR 流程</h3><p><img src="/2023/10/30/pseudo-LiDAR/2023-10-30-16-00-41.png"></p><p>其首先利用图像深度预测模型（如DRON、PSMNET）从单目或立体图像获取对应深度图像；然后将原图像和深度信息结合得到伪雷达点云，将像素反投影到3D坐标中，得到点云；最后用伪点云代替原始雷达点云，在基于点云的感知模型中进行感知任务（如F-PointNet、AVOD）。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p><a href="https://github.com/mileyan/pseudo_lidar">https://github.com/mileyan/pseudo_lidar</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>BEV</tag>
+      
+      <tag>激光雷达</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Flutter踩坑报告</title>
     <link href="/2023/10/25/draw/"/>
     <url>/2023/10/25/draw/</url>

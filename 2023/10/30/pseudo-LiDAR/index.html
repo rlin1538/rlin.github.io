@@ -16,25 +16,27 @@
   <meta name="author" content="Rlin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Flutter 踩坑总集卡在assembleDebug卡在 Running Gradle task ‘assembleDebug’… 这个步骤。而且会报网络的 Exception。 可以尝试改flutter和项目的gradle源地址到国内镜像，可能没啥用 也可以手动安装。首先在 android&#x2F;gradle&#x2F;wrapper&#x2F;gradle-wrapper.propert">
+    <meta name="description" content="论文论文的题目是：《Pseudo-LiDAR from Visual Depth Estimation: Bridging the Gap in 3D Object Detection for Autonomous Driving》 论文探讨了基于图像的3D感知和基于LiDAR的3D感知之间的差异，指出基于图像方法的不足，提出了Pseudo-LiDAR来从图像建立点云数据进行感知任务。 Image">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Flutter踩坑报告">
-<meta property="og:url" content="http://nuaa.life/2023/10/25/draw/index.html">
+<meta property="og:title" content="【BEV】伪雷达点云—Pseudo-LiDAR">
+<meta property="og:url" content="http://nuaa.life/2023/10/30/pseudo-LiDAR/index.html">
 <meta property="og:site_name" content="Rlin的博客">
-<meta property="og:description" content="Flutter 踩坑总集卡在assembleDebug卡在 Running Gradle task ‘assembleDebug’… 这个步骤。而且会报网络的 Exception。 可以尝试改flutter和项目的gradle源地址到国内镜像，可能没啥用 也可以手动安装。首先在 android&#x2F;gradle&#x2F;wrapper&#x2F;gradle-wrapper.propert">
+<meta property="og:description" content="论文论文的题目是：《Pseudo-LiDAR from Visual Depth Estimation: Bridging the Gap in 3D Object Detection for Autonomous Driving》 论文探讨了基于图像的3D感知和基于LiDAR的3D感知之间的差异，指出基于图像方法的不足，提出了Pseudo-LiDAR来从图像建立点云数据进行感知任务。 Image">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-25T02:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-30T08:13:59.634Z">
+<meta property="og:image" content="http://nuaa.life/2023/10/30/pseudo-LiDAR/2023-10-30-16-00-41.png">
+<meta property="article:published_time" content="2023-10-30T07:35:00.000Z">
+<meta property="article:modified_time" content="2023-10-30T08:13:59.638Z">
 <meta property="article:author" content="Rlin">
-<meta property="article:tag" content="flutter">
-<meta property="article:tag" content="bug">
+<meta property="article:tag" content="BEV">
+<meta property="article:tag" content="激光雷达">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://nuaa.life/2023/10/30/pseudo-LiDAR/2023-10-30-16-00-41.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Flutter踩坑报告 - Rlin的博客</title>
+  <title>【BEV】伪雷达点云—Pseudo-LiDAR - Rlin的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -224,7 +226,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Flutter踩坑报告"></span>
+            <span id="subtitle" data-typed-text="【BEV】伪雷达点云—Pseudo-LiDAR"></span>
           
         </div>
 
@@ -240,8 +242,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-25 10:00" pubdate>
-          2023年10月25日 上午
+        <time datetime="2023-10-30 15:35" pubdate>
+          2023年10月30日 下午
         </time>
       </span>
     
@@ -252,7 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          564 字
         
       </span>
     
@@ -263,7 +265,7 @@
         
         
         
-          12 分钟
+          5 分钟
         
       </span>
     
@@ -308,32 +310,23 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Flutter踩坑报告</h1>
+            <h1 id="seo-header">【BEV】伪雷达点云—Pseudo-LiDAR</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="Flutter-踩坑总集"><a href="#Flutter-踩坑总集" class="headerlink" title="Flutter 踩坑总集"></a>Flutter 踩坑总集</h1><h3 id="卡在assembleDebug"><a href="#卡在assembleDebug" class="headerlink" title="卡在assembleDebug"></a>卡在assembleDebug</h3><p>卡在 Running Gradle task ‘assembleDebug’… 这个步骤。而且会报网络的 Exception。</p>
-<p>可以尝试改flutter和项目的gradle源地址到国内镜像，可能没啥用</p>
-<p>也可以手动安装。首先在 android&#x2F;gradle&#x2F;wrapper&#x2F;gradle-wrapper.properties 可以看到本项目使用的 Gradle 版本。在 Gradle 的官网（<a target="_blank" rel="noopener" href="https://gradle.org/%EF%BC%89%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%B8%8B%E8%BD%BD%E5%88%B0%E5%AE%8C%E6%95%B4%E7%9A%84%E5%8C%85%E3%80%82">https://gradle.org/）就可以下载到完整的包。</a></p>
-<p>在 <a target="_blank" rel="noopener" href="https://services.gradle.org/distributions/">https://services.gradle.org/distributions/</a> 下载对应版本的包，如 gradle-5.6.2-all.zip。</p>
-<p>下载完成之后解压到 ～&#x2F;.gradle&#x2F;wrapper&#x2F;dists&#x2F;gradle-5.6.2-all&#x2F;xxx 下。其中 xxx 为一串如 9st6wgf78h16so49nn74lgtbb 的字符串。</p>
-<hr>
-<h3 id="Google-font版本太低"><a href="#Google-font版本太低" class="headerlink" title="Google font版本太低"></a>Google font版本太低</h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-section">import &#x27;asset_manifest.dart&#x27;;</span><br><span class="hljs-section">^^^^^^^^^^^^^</span><br></code></pre></td></tr></table></figure>
-
-<p>Google font版本太低<br><a target="_blank" rel="noopener" href="https://dev.to/curtlycritchlow/how-to-fix-assetmanifest-is-imported-from-both-packageflutter-and-packagegooglefonts-error-28e8">https://dev.to/curtlycritchlow/how-to-fix-assetmanifest-is-imported-from-both-packageflutter-and-packagegooglefonts-error-28e8</a></p>
-<hr>
-<h3 id="Execution-failed-for-task-‘-app-lintVitalRelease’"><a href="#Execution-failed-for-task-‘-app-lintVitalRelease’" class="headerlink" title="Execution failed for task ‘:app:lintVitalRelease’."></a>Execution failed for task ‘:app:lintVitalRelease’.</h3><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vhdl">Flutter <span class="hljs-literal">Error</span> : Could <span class="hljs-keyword">not</span> resolve <span class="hljs-keyword">all</span> artifacts <span class="hljs-keyword">for</span> <span class="hljs-keyword">configuration</span> ‘:image_picker_android:debugUnitTestRuntimeClasspath’<br></code></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://flutter-developer.medium.com/solved-flutter-error-could-not-resolve-all-artifacts-for-configuration-56deea1c5d12">https://flutter-developer.medium.com/solved-flutter-error-could-not-resolve-all-artifacts-for-configuration-56deea1c5d12</a></p>
-<p>解决方案似乎是忽略掉某些错误🤔</p>
-<hr>
-<h3 id="Android-12-app安装错误"><a href="#Android-12-app安装错误" class="headerlink" title="Android 12 app安装错误"></a>Android 12 app安装错误</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">Targeting S+ (<span class="hljs-built_in">version</span> <span class="hljs-number">31</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">above</span>) requires <span class="hljs-keyword">that</span> an explicit value <span class="hljs-keyword">for</span> android:exported be defined when intent filters are present<br></code></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/70333565/targeting-s-version-31-and-above-requires-that-an-explicit-value-for-android">https://stackoverflow.com/questions/70333565/targeting-s-version-31-and-above-requires-that-an-explicit-value-for-android</a></p>
-<hr>
-<h3 id="签名与流水线CI-CD"><a href="#签名与流水线CI-CD" class="headerlink" title="签名与流水线CI&#x2F;CD"></a>签名与流水线CI&#x2F;CD</h3><p><a target="_blank" rel="noopener" href="https://52smile.vip/2023/08/03/CI-CD/index.html">https://52smile.vip/2023/08/03/CI-CD/index.html</a></p>
-<p><a target="_blank" rel="noopener" href="https://coldstone.fun/post/2020/02/26/flutter-github-actions/">https://coldstone.fun/post/2020/02/26/flutter-github-actions/</a></p>
+                <h1 id="论文"><a href="#论文" class="headerlink" title="论文"></a>论文</h1><p>论文的题目是：<em>《<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1812.07179">Pseudo-LiDAR from Visual Depth Estimation: Bridging the Gap in 3D Object Detection for Autonomous Driving》</a></em></p>
+<p>论文探讨了基于图像的3D感知和基于LiDAR的3D感知之间的差异，指出基于图像方法的不足，提出了Pseudo-LiDAR来从图像建立点云数据进行感知任务。</p>
+<h3 id="Image-based-3D-Perception-劣势原因"><a href="#Image-based-3D-Perception-劣势原因" class="headerlink" title="Image-based 3D Perception 劣势原因"></a>Image-based 3D Perception 劣势原因</h3><ul>
+<li><p>不准确的深度信息</p>
+</li>
+<li><p>图像2D的表示方式</p>
+</li>
+</ul>
+<p>后者是造成2维卷积在基于图像的感知任务中使图像扭曲的原因。作者分析了两个主要问题：一是不同物体间应该不连贯，但2D图像中不同深度的物体均在一个平面上（不像点云那种，不同深度不连贯）；二是前后景不同尺度，2D图像远处物体由于透视原因尺度较小，检测成为一个较难的问题（雷达点云则能保持三维空间中原始的尺度）。</p>
+<h3 id="Pseudo-LiDAR-流程"><a href="#Pseudo-LiDAR-流程" class="headerlink" title="Pseudo-LiDAR 流程"></a>Pseudo-LiDAR 流程</h3><p><img src="/2023/10/30/pseudo-LiDAR/2023-10-30-16-00-41.png" srcset="/img/loading.gif" lazyload></p>
+<p>其首先利用图像深度预测模型（如DRON、PSMNET）从单目或立体图像获取对应深度图像；然后将原图像和深度信息结合得到伪雷达点云，将像素反投影到3D坐标中，得到点云；最后用伪点云代替原始雷达点云，在基于点云的感知模型中进行感知任务（如F-PointNet、AVOD）。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p><a target="_blank" rel="noopener" href="https://github.com/mileyan/pseudo_lidar">https://github.com/mileyan/pseudo_lidar</a></p>
 
                 
               </div>
@@ -346,9 +339,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/flutter/" class="print-no-link">#flutter</a>
+        <a href="/tags/BEV/" class="print-no-link">#BEV</a>
       
-        <a href="/tags/bug/" class="print-no-link">#bug</a>
+        <a href="/tags/%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE/" class="print-no-link">#激光雷达</a>
       
     </div>
   
@@ -360,8 +353,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Flutter踩坑报告</div>
-      <div>http://nuaa.life/2023/10/25/draw/</div>
+      <div>【BEV】伪雷达点云—Pseudo-LiDAR</div>
+      <div>http://nuaa.life/2023/10/30/pseudo-LiDAR/</div>
     </div>
     <div class="license-meta">
       
@@ -373,7 +366,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月25日</div>
+          <div>2023年10月30日</div>
         </div>
       
       
@@ -422,18 +415,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/30/pseudo-LiDAR/" title="【BEV】伪雷达点云—Pseudo-LiDAR">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【BEV】伪雷达点云—Pseudo-LiDAR</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/23/lss/" title="【BEV】BEV模型开山论文——Lift-Splat-Shoot">
-                        <span class="hidden-mobile">【BEV】BEV模型开山论文——Lift-Splat-Shoot</span>
+                      <a href="/2023/10/25/draw/" title="Flutter踩坑报告">
+                        <span class="hidden-mobile">Flutter踩坑报告</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
