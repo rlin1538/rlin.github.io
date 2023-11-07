@@ -16,30 +16,28 @@
   <meta name="author" content="Rlin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言环境搭建https:&#x2F;&#x2F;www.cnblogs.com&#x2F;mrneojeep&#x2F;p&#x2F;17390375.html https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_45228845&#x2F;article&#x2F;details&#x2F;125583891 问题集合 kornia问题 1ModuleNotFoundError: No module named ‘kornia‘ 或者 1Cannot statically i">
+    <meta name="description" content="一九八四——乔治·奥威尔著在看完村上春树的《1Q84》之后，感触颇多，想写点东西记录一下，因此一时兴起建了博客，这就是本站的来历（文艺青年bushi）。首页的slogan就是源自1Q84，过多的不在此介绍，后续会补上1Q84的读后感。 而1Q84的灵感来源正是乔治奥威尔的《1984》，据说村上先取了同名的标题，想要致敬奥威尔，然后才改成1Q84，接着才开始想要写些什么。毫无疑问，两部小说中有着许多">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenPCDet复现">
-<meta property="og:url" content="http://nuaa.life/2023/10/16/pcdet/index.html">
+<meta property="og:title" content="《一九八四》小记">
+<meta property="og:url" content="http://nuaa.life/2023/11/07/1984/index.html">
 <meta property="og:site_name" content="Rlin的博客">
-<meta property="og:description" content="前言环境搭建https:&#x2F;&#x2F;www.cnblogs.com&#x2F;mrneojeep&#x2F;p&#x2F;17390375.html https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_45228845&#x2F;article&#x2F;details&#x2F;125583891 问题集合 kornia问题 1ModuleNotFoundError: No module named ‘kornia‘ 或者 1Cannot statically i">
+<meta property="og:description" content="一九八四——乔治·奥威尔著在看完村上春树的《1Q84》之后，感触颇多，想写点东西记录一下，因此一时兴起建了博客，这就是本站的来历（文艺青年bushi）。首页的slogan就是源自1Q84，过多的不在此介绍，后续会补上1Q84的读后感。 而1Q84的灵感来源正是乔治奥威尔的《1984》，据说村上先取了同名的标题，想要致敬奥威尔，然后才改成1Q84，接着才开始想要写些什么。毫无疑问，两部小说中有着许多">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://nuaa.life/2023/10/16/pcdet/2023-10-16-19-58-11.png">
-<meta property="article:published_time" content="2023-10-16T12:00:00.000Z">
-<meta property="article:modified_time" content="2023-11-07T15:05:29.735Z">
+<meta property="og:image" content="http://nuaa.life/2023/11/07/1984/2023-11-07-22-32-13.png">
+<meta property="og:image" content="http://nuaa.life/2023/11/07/1984/2023-11-07-22-43-38.png">
+<meta property="article:published_time" content="2023-11-07T14:00:00.000Z">
+<meta property="article:modified_time" content="2023-11-07T15:05:29.731Z">
 <meta property="article:author" content="Rlin">
-<meta property="article:tag" content="复现记录">
-<meta property="article:tag" content="目标检测">
-<meta property="article:tag" content="点云">
-<meta property="article:tag" content="深度学习">
-<meta property="article:tag" content="激光雷达">
+<meta property="article:tag" content="文学">
+<meta property="article:tag" content="读后感">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://nuaa.life/2023/10/16/pcdet/2023-10-16-19-58-11.png">
+<meta name="twitter:image" content="http://nuaa.life/2023/11/07/1984/2023-11-07-22-32-13.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>OpenPCDet复现 - Rlin的博客</title>
+  <title>《一九八四》小记 - Rlin的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -229,7 +227,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="OpenPCDet复现"></span>
+            <span id="subtitle" data-typed-text="《一九八四》小记"></span>
           
         </div>
 
@@ -245,8 +243,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-16 20:00" pubdate>
-          2023年10月16日 晚上
+        <time datetime="2023-11-07 22:00" pubdate>
+          2023年11月7日 晚上
         </time>
       </span>
     
@@ -257,7 +255,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          469 字
+          1.3k 字
         
       </span>
     
@@ -268,7 +266,7 @@
         
         
         
-          4 分钟
+          12 分钟
         
       </span>
     
@@ -313,32 +311,35 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">OpenPCDet复现</h1>
+            <h1 id="seo-header">《一九八四》小记</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/mrneojeep/p/17390375.html">https://www.cnblogs.com/mrneojeep/p/17390375.html</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45228845/article/details/125583891">https://blog.csdn.net/qq_45228845/article/details/125583891</a></p>
-<h1 id="问题集合"><a href="#问题集合" class="headerlink" title="问题集合"></a>问题集合</h1><ol>
-<li><p>kornia问题<br><img src="/2023/10/16/pcdet/2023-10-16-19-58-11.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs fortran">ModuleNotFoundError: No <span class="hljs-keyword">module</span> <span class="hljs-keyword">named</span> ‘kornia‘<br></code></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino">Cannot statically infer the expected size of a list in <span class="hljs-keyword">this</span> context<br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p>解决方案：安装正确版本的kornia<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_52288941/article/details/133518555">https://blog.csdn.net/weixin_52288941/article/details/133518555</a></p>
-</blockquote>
-</li>
-<li><p>demo跑通了但是：</p>
-<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gams">GLFW Error: X11: The <span class="hljs-keyword">DISPLAY</span> environment <span class="hljs-keyword">variable</span> is <span class="hljs-comment">missing</span><br></code></pre></td></tr></table></figure>
-
-<p>ssh远程没有Xserver客户端，显示不了可视化工具</p>
-<blockquote>
-<p>解决方案：配置本地可视化<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_50181189/article/details/120958568">https://blog.csdn.net/m0_50181189/article/details/120958568</a></p>
-</blockquote>
-</li>
-</ol>
+                <h1 id="一九八四——乔治·奥威尔著"><a href="#一九八四——乔治·奥威尔著" class="headerlink" title="一九八四——乔治·奥威尔著"></a>一九八四——乔治·奥威尔著</h1><p>在看完村上春树的《1Q84》之后，感触颇多，想写点东西记录一下，因此一时兴起建了博客，这就是本站的来历（文艺青年bushi）。首页的slogan就是源自1Q84，过多的不在此介绍，后续会补上1Q84的读后感。</p>
+<p>而1Q84的灵感来源正是乔治奥威尔的《1984》，据说村上先取了同名的标题，想要致敬奥威尔，然后才改成1Q84，接着才开始想要写些什么。毫无疑问，两部小说中有着许多相同的主旨,最明显的就是<code>反乌托邦</code>。</p>
+<p>本部小说出版于1949年，而故事发生在1984年，可以说包含一定的科幻元素🤔，最显著的就是文中反复提到的“电幕”。很明显，1949年没有这东西吧，这东西就是一个大块落地屏幕，不过还能监控你。本书是反乌托邦小说，有许多政治隐喻，结合时代背景，很容易看出作者批斗的是斯大林的体制，探讨政府权力过度伸张、极权主义和实施压抑性统治的后果。文中的老大哥，不用说也知道就是最大号人物吧。</p>
+<p>我的读书小记可能有点记流水账，不过主要就是想写点东西记录读书内容和感受😋，写给自己看的就不讲究啥啦。</p>
+<h2 id="第一部-·-老大哥正在看着你"><a href="#第一部-·-老大哥正在看着你" class="headerlink" title="第一部 · 老大哥正在看着你"></a>第一部 · 老大哥正在看着你</h2><p>本部分主要介绍故事背景，以及主人公温斯顿·史密斯的现状。</p>
+<p>故事发生在大洋国（三个洲际超级大国之一），二战后世界分成了三个国家联盟，而本文发生在大洋国的伦敦省。</p>
+<p>温斯顿是外围党的成员，在孤儿院长大，被党培养长大。这里介绍一下大洋国的社会阶级：<img src="/2023/11/07/1984/2023-11-07-22-32-13.png" srcset="/img/loading.gif" lazyload></p>
+<p>核心党员、外围党员和群众。</p>
+<p>政府由四个部分来控制群众</p>
+<ul>
+<li>和平部：负责战争（一点也不和平</li>
+<li>富裕部：负责经济事务（一点也不富裕，实际上定量配给，群众饿死</li>
+<li>友爱部：负责法律和秩序（一点也不友爱，酷刑+洗脑</li>
+<li>真理部：负责宣传（一点也不真理，篡改部</li>
+</ul>
+<p>温斯顿在真理部工作，负责的就是改写文献历史，使其“符合正统”（岁月的史书是吧）。然后他住的地方，在小说一开始时就描写到了，到处都有老大哥的画像，然后画像下方标题写着一句著名的话：“老大哥正在看着你”<img src="/2023/11/07/1984/2023-11-07-22-43-38.png" srcset="/img/loading.gif" lazyload></p>
+<p>然后还有三条贯穿全文的标语：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">战争即和平<br>自幼即奴役<br>无知即力量<br></code></pre></td></tr></table></figure>
+<p>温斯顿的生活只能说凑合能过，一间一居室的公寓，日常黑面包和人工合成饭菜，还有备受吐槽的胜利牌杜松子酒。主角表面上兢兢业业，背地里坏心思可多，比如他居然写日记。。。。正经人谁写日记啊！（bushu）问题是在日记里，温斯顿写了不少他对党对老大哥的负面看法，要是被思想警察逮到，直接gg。他在日记里写道：</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">思想罪不会导致死亡；思想罪本身<span class="hljs-string">&quot;&quot;</span>就是<span class="hljs-string">&quot;死亡。</span><br></code></pre></td></tr></table></figure>
+<p>所以他写日记是偷偷地，背着电幕写。</p>
+<p>回到他的工作，改写历史。就是将过去的记录修改为目前符合党的官方版本，好让群众觉得大洋国政府多牛掰。他充分发挥聪明才智，重写历史、捏造人物、伪造照片，然后将原始记录丢进忘怀洞，彻底从这个世界上抹除。温斯顿还挺享受动脑筋解决问题的过程，但这也让他想热切了解过去那个世界。</p>
+<p>因此他跟踪了一个老头，想从他嘴里套出点过去的事，但老头不上当，啥也没问出来。</p>
+<p>他还着迷一些老物件，比如写日记的日记本就是去古董店淘的，后面还去淘了一块珊瑚鹅卵石，原因是这不是这个时代可能有的东西。回家路上，他碰到了小说司的那个女孩，认为她在跟踪他，然后溜回家了。趟家里胡思乱想，怕下一秒就被思想警察冲进门逮捕。</p>
 
                 
               </div>
@@ -351,15 +352,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%A4%8D%E7%8E%B0%E8%AE%B0%E5%BD%95/" class="print-no-link">#复现记录</a>
+        <a href="/tags/%E6%96%87%E5%AD%A6/" class="print-no-link">#文学</a>
       
-        <a href="/tags/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/" class="print-no-link">#目标检测</a>
-      
-        <a href="/tags/%E7%82%B9%E4%BA%91/" class="print-no-link">#点云</a>
-      
-        <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="print-no-link">#深度学习</a>
-      
-        <a href="/tags/%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE/" class="print-no-link">#激光雷达</a>
+        <a href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/" class="print-no-link">#读后感</a>
       
     </div>
   
@@ -371,8 +366,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>OpenPCDet复现</div>
-      <div>http://nuaa.life/2023/10/16/pcdet/</div>
+      <div>《一九八四》小记</div>
+      <div>http://nuaa.life/2023/11/07/1984/</div>
     </div>
     <div class="license-meta">
       
@@ -384,7 +379,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月16日</div>
+          <div>2023年11月7日</div>
         </div>
       
       
@@ -433,18 +428,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/23/lss/" title="【BEV】BEV模型开山论文——Lift-Splat-Shoot">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【BEV】BEV模型开山论文——Lift-Splat-Shoot</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/13/first-post/" title="建站小记">
-                        <span class="hidden-mobile">建站小记</span>
+                      <a href="/2023/10/30/pseudo-LiDAR/" title="【BEV】伪雷达点云—Pseudo-LiDAR">
+                        <span class="hidden-mobile">【BEV】伪雷达点云—Pseudo-LiDAR</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
