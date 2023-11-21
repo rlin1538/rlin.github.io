@@ -4,13 +4,19 @@
   
   
   <entry>
-    <title>激光雷达调研 - 激光雷达</title>
+    <title>激光雷达调研</title>
     <link href="/2023/11/21/lidar/"/>
     <url>/2023/11/21/lidar/</url>
     
     <content type="html"><![CDATA[<h1 id="激光雷达调研"><a href="#激光雷达调研" class="headerlink" title="激光雷达调研"></a>激光雷达调研</h1><p>导师最近想入手激光雷达来搞点云，让我调研一下各个型号，主要是大疆的型号，然后其他对比看看<br><img src="/2023/11/21/lidar/2023-11-21-19-43-26.png"></p><p>目前感兴趣的是Mid-70这一款</p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>激光雷达</tag>
+      
+    </tags>
     
   </entry>
   
@@ -155,13 +161,13 @@
       
       <tag>复现记录</tag>
       
+      <tag>激光雷达</tag>
+      
       <tag>目标检测</tag>
       
       <tag>点云</tag>
       
       <tag>深度学习</tag>
-      
-      <tag>激光雷达</tag>
       
     </tags>
     
