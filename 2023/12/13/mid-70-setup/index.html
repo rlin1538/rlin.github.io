@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://nuaa.life/2023/12/13/mid-70-setup/2023-12-19-14-23-46.png">
 <meta property="og:image" content="http://nuaa.life/2023/12/13/mid-70-setup/mid40_hall%20(1).gif">
 <meta property="article:published_time" content="2023-12-13T11:00:00.000Z">
-<meta property="article:modified_time" content="2023-12-19T10:22:28.915Z">
+<meta property="article:modified_time" content="2023-12-19T13:10:51.782Z">
 <meta property="article:author" content="Rlin">
 <meta property="article:tag" content="激光雷达">
 <meta name="twitter:card" content="summary_large_image">
@@ -255,7 +255,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          2.2k 字
         
       </span>
     
@@ -266,7 +266,7 @@
         
         
         
-          15 分钟
+          19 分钟
         
       </span>
     
@@ -336,6 +336,8 @@
 <p>这里直接用一键安装的脚本，可以非常非常方便的一键安装所需环境。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget http://fishros.com/install -O fishros &amp;&amp; . fishros<br></code></pre></td></tr></table></figure>
 <p>一路按推荐选项即可。<br>选择的是ROS1的环境，暂时不需要ROS2。</p>
+<p>安装完成后执行<code>roscore</code>，如没报错则完成ROS环境搭建，如提示不存在命令，则需更新一下source ROS目录下的setup.sh</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /opt/ros/noetic/setup.sh<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source /opt/ros/noetic/setup.sh&quot;</span> &gt;&gt; ~/.bashrc<br><span class="hljs-built_in">source</span> ~/.bashrc<br><br><span class="hljs-comment">## noetic 为你的ROS版本名称</span><br></code></pre></td></tr></table></figure>
 <blockquote>
 </blockquote>
 <h3 id="Livox-SKD"><a href="#Livox-SKD" class="headerlink" title="Livox-SKD"></a>Livox-SKD</h3><h4 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h4><p>Livox SDK 依赖于 cmake 。你可以通过 apt 工具安装这些依赖包 :</p>
@@ -365,7 +367,7 @@
 <h1 id="部分算法"><a href="#部分算法" class="headerlink" title="部分算法"></a>部分算法</h1><h2 id="Livox-mapping"><a href="#Livox-mapping" class="headerlink" title="Livox_mapping"></a>Livox_mapping</h2><p>这个是Livox官方提供的建图软件包，适用于低速运动下的mapping。</p>
 <p><img src="/2023/12/13/mid-70-setup/mid40_hall%20(1).gif" srcset="/img/loading.gif" lazyload></p>
 <blockquote>
-<p>按上述环境搭建后，一般可以直接构建本软件包，如有提示缺少依赖，可以按官方文档安装PCL &amp;&amp; Eigen &amp;&amp; openCV</p>
+<p>按上述环境搭建后，一般可以直接构建本软件包，如有提示缺少依赖，可以按官方文档安装PCL &amp;&amp; Eigen &amp;&amp; openCV<br>openCV安装：<a target="_blank" rel="noopener" href="https://blog.csdn.net/public669/article/details/99044895">https://blog.csdn.net/public669/article/details/99044895</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qianbin3200896/article/details/107894029?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-10&spm=1001.2101.3001.4242">https://blog.csdn.net/qianbin3200896/article/details/107894029?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-10&amp;spm=1001.2101.3001.4242</a><br>推荐openCV3.4的</p>
 </blockquote>
 <h4 id="软件包构建"><a href="#软件包构建" class="headerlink" title="软件包构建"></a>软件包构建</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ~/ws_livox/src<br>git <span class="hljs-built_in">clone</span> https://github.com/Livox-SDK/livox_mapping.git<br><span class="hljs-built_in">cd</span> ..<br>catkin_make<br><span class="hljs-built_in">source</span> ~/ws_livox/devel/setup.bash<br></code></pre></td></tr></table></figure>
 
