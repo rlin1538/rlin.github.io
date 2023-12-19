@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://nuaa.life/2023/12/13/mid-70-setup/2023-12-19-14-23-46.png">
 <meta property="og:image" content="http://nuaa.life/2023/12/13/mid-70-setup/mid40_hall%20(1).gif">
 <meta property="article:published_time" content="2023-12-13T11:00:00.000Z">
-<meta property="article:modified_time" content="2023-12-19T13:10:51.782Z">
+<meta property="article:modified_time" content="2023-12-19T13:37:21.461Z">
 <meta property="article:author" content="Rlin">
 <meta property="article:tag" content="激光雷达">
 <meta name="twitter:card" content="summary_large_image">
@@ -255,7 +255,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.2k 字
+          2.5k 字
         
       </span>
     
@@ -266,7 +266,7 @@
         
         
         
-          19 分钟
+          22 分钟
         
       </span>
     
@@ -329,7 +329,7 @@
 <h2 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h2><p>参考官方提供的文档直接安装：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/wsl/install">https://learn.microsoft.com/zh-cn/windows/wsl/install</a></p>
 <p>然后到微软商城搜索Ubuntu，选择18.04的版本直接安装。</p>
 <blockquote>
-<p>注意wsl的版本，后续需要用到图形化界面的功能，只有wsl2能够使用。</p>
+<p>注意wsl的版本，后续需要用到图形化界面的功能，只有wsl2能够使用。<br>ubuntu20.04 也能搭环境，但后面跑一些算法时需要额外修改一些代码。<br>一开始我用了18.04，但是GUI太卡了，点云一多，卡到爆炸，后面查了一下，18.04似乎不支持GUI显卡加速。所以改用20.04</p>
 </blockquote>
 <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="ROS环境"><a href="#ROS环境" class="headerlink" title="ROS环境"></a>ROS环境</h3><p>ROS（英语：Robot Operating System，一般译为机器人操作系统），是专为机器人软件开发所设计出来的一套电脑操作系统架构。</p>
 <p>目前重点不是这个，所以不做过多介绍，ros环境是许多项目的基础环境，所以需要配置好。</p>
@@ -375,6 +375,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">roslaunch livox_mapping mapping_mid.launch<br>roslaunch livox_ros_driver livox_lidar.launch<br></code></pre></td></tr></table></figure>
 
 <p>随即将启动Rivz，移动激光雷达，完成建图。</p>
+<blockquote>
+<h5 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a>温馨提示</h5><p>在Ubuntu 20.04系统下运行时，可能会出现一些问题，比如<br>Error transforming odometry ‘Odometry’ from frame ‘&#x2F;camera_init’ to frame ‘camera_init’<br>这时候需要将代码里的<code>/camera_init</code>改成<code>camera_init</code><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xinzhaodc/p/16143348.html">https://www.cnblogs.com/xinzhaodc/p/16143348.html</a></p>
+</blockquote>
 
                 
               </div>
